@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../../../">Log Out</a>
+<a href="add-employee/">Add an Employee</a>
+<a href="warehouse-product-view/">View Products Stored in Your Warehouse</a>
+
+<h1> Welcome to the manager portal: {{ manager.first_name }}</h1>
+
+<h3> Your Current Assignment: </h3>
+<ul>
+    <li> Region: {{ manager.region.name }} </li>
+    <li> Warehouse: {{ manager.warehouse.name }} </li>
+    <li> Warehouse Address: {{ manager.warehouse.address }} </li>
+    <li> Warehouse Size: {{ manager.warehouse.size }} square feet </li>
+</ul>
+
+<h3> Your Employees: </h3>
+{% for e in employees %}
+<ul>
+    <li> First Name: {{ e.first_name }} </li>
+    <li> Last Name: {{ e.last_name }} </li>
+    <li> Job Role: {{ e.job_role }}</li>
+    <li> Warehouse: {{ e.warehouse.name }}</li>
+    <li> Region: {{ e.region.name }}</li>
+    <li> Address: {{ e.address }}</li>
+    <li> Phone Number: {{ e.phone_number }}</li>
+    <li> Email: {{ e.email}}</li>
+</ul>
+
+<style>
+body {
+  background-color: powderblue;
+  width: 80%;
+  border: 20px solid #bdc3c7;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+h1   {color: blue;}
+p    {color: red;}
+.flex-container {
+  display: flex;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>
+
+{% endfor %}
+
+</body>
+</html>

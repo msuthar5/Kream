@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../">Home</a>
+<h1> Products Stored in {{ manager.warehouse.name }} </h1>
+
+{% for p in products %}
+
+<ul>
+    <li> Name: {{ p.name }} </li>
+    <li> Description: {{ p.description }} </li>
+    <li> Price: ${{ p.price }} </li>
+    <li> Quantity: {{ p.Quantity }} </li>
+    <li> In Stock: {{ p.in_stock }} </li>
+    <li> Customer First Name: {{ p.customer.first_name}} </li>
+    <li> Customer Last Name: {{ p.customer.last_name }} </li>
+</ul>
+
+{% endfor %}
+<style>
+body {
+  background-color: powderblue;
+  width: 80%;
+  border: 20px solid #bdc3c7;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+h1   {color: blue;}
+p    {color: red;}
+.flex-container {
+  display: flex;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>
+</body>
+</html>

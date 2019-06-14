@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../../">Log Out</a>
+<h1> Welcome to the Employee Portal</h1>
+<h3> Your Information: </h3>
+<ul>
+    <li> First Name: {{ employee.first_name }} </li>
+    <li> Last Name: {{ employee.last_name }} </li>
+    <li> Job Role: {{ employee.job_role }}</li>
+    <li> Email: {{ employee.email_address }}</li>
+    <li> Phone Number: {{ employee.phone_number }}</li>
+    <li> Address: {{ employee.address}}</li>
+    <li> Region: {{ employee.region.name }}</li>
+    <li> Warehouse: {{ employee.warehouse.name}}</li>
+</ul>
+<style>
+body {
+  background-color: powderblue;
+  width: 80%;
+  border: 20px solid #bdc3c7;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+h1   {color: blue;}
+p    {color: red;}
+.flex-container {
+  display: flex;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+</style>
+</body>
+</html>
